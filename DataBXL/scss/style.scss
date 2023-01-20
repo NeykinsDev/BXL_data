@@ -1,0 +1,161 @@
+$box_shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:#364F6B;
+}
+header{
+    padding:1rem;
+}
+h1{
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+}
+footer{
+    padding: 2rem;
+    bottom:0
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(18rem,80%,28.5rem);
+    padding: 1rem 2rem;
+    box-shadow:$box_shadow;
+    border-radius: .3rem;
+    background-color:rgba(255,255,255,.8) ;
+    margin:1rem;
+    p{
+        text-align: justify;
+        line-height: 1.6;
+    }
+}
+.click{
+    background-color:darken(#3490DE,3%) ;
+    color:#fff;
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    text-align: center;
+    box-shadow:$box_shadow;
+    margin:1rem 0;
+    &:hover{
+        background-color:darken(#3490DE,10%);
+    }
+}
+h2{
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    div{
+        p{
+            margin-bottom: .5rem;
+        }
+    }
+}
+input{
+    padding: .5rem 1rem;
+    &[id="long"],&[type="checkbox"]{
+      margin-bottom: 1rem;
+    }
+    border-radius: .3rem;
+    border:1px solid #364F6B
+}
+label[for="lat"],label[for="long"]{
+    margin-bottom: .5rem;
+    &::after{
+        content: ' *';
+        color: red;
+    }
+}
+
+select{
+  margin:0 .5rem;
+  padding: .3rem .5rem .3rem 0;
+  border: 1px solid #364F6B;
+  border-radius: .3rem;
+  background: white;
+  option{
+   &:focus{
+     background-color: red;
+   }
+  }
+ 
+} 
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.result-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  width:clamp(20rem,100%,93.75rem);
+  justify-content: center;
+  gap:3rem;
+  h3{
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: clamp(1.5rem,5vw,2.5rem);
+  }
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    width: clamp(18rem,80%,28.5rem);
+    background-color:rgba(255,255,255,.8) ;
+    border-radius: .3rem;
+    padding:1rem;
+    gap:1rem;
+    box-shadow: $box_shadow;
+
+    img{
+        width: clamp(17rem,100%,40rem);
+        align-self: center;
+        border-radius: inherit;
+    }
+    p{
+        padding:0 1rem;
+    }
+}
+.separator{
+  margin: 2rem 0;
+  font-size: 1.125rem;
+}
+
+.green{
+  color:green;
+}
+.red{
+  color:red;
+}

@@ -1,0 +1,304 @@
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #364F6B;
+  }
+  
+  header {
+    padding: 1rem;
+  }
+  
+  h1 {
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+  
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  
+  footer {
+    padding: 2rem;
+    bottom: 0;
+  }
+  
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: clamp(18rem, 80%, 28.5rem);
+    padding: 1rem 2rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: .3rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 1rem;
+  }
+  
+  .card p {
+    text-align: justify;
+    line-height: 1.6;
+  }
+  
+  .click {
+    background-color: #2789dc;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 1rem 0;
+  }
+  
+  .click:hover {
+    background-color: #1f76c0;
+  }
+  
+  h2 {
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+  }
+  
+  form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  
+  form div p {
+    margin-bottom: .5rem;
+  }
+  
+  input {
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    border: 1px solid #364F6B;
+  }
+  
+  input[id="long"], input[type="checkbox"] {
+    margin-bottom: 1rem;
+  }
+  
+  label[for="lat"], label[for="long"] {
+    margin-bottom: .5rem;
+  }
+  
+  label[for="lat"]::after, label[for="long"]::after {
+    content: ' *';
+    color: red;
+  }
+  
+  select {
+    margin: 0 .5rem;
+    padding: .3rem .5rem .3rem 0;
+    border: 1px solid #364F6B;
+    border-radius: .3rem;
+    background: white;
+  }
+  
+  select option:focus {
+    background-color: red;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  .result-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: clamp(20rem, 100%, 93.75rem);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 3rem;
+  }
+  
+  .result-wrapper h3 {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+  
+  .result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: clamp(18rem, 80%, 28.5rem);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: .3rem;
+    padding: 1rem;
+    gap: 1rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .result img {
+    width: clamp(17rem, 100%, 40rem);
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    border-radius: inherit;
+  }
+  
+  .result p {
+    padding: 0 1rem;
+  }
+  
+  .separator {
+    margin: 2rem 0;
+    font-size: 1.125rem;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  path {
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+  }
+  
+  .background--custom {
+    background-color: #FFFFFF;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  
+  @-webkit-keyframes path0 {
+    0% {
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+    100% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+  }
+  
+  @keyframes path0 {
+    0% {
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+    100% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+  }
+  
+  @-webkit-keyframes path1 {
+    0% {
+      -webkit-transform: rotate(-30deg);
+              transform: rotate(-30deg);
+    }
+    100% {
+      -webkit-transform: rotate(30deg);
+              transform: rotate(30deg);
+    }
+  }
+  
+  @keyframes path1 {
+    0% {
+      -webkit-transform: rotate(-30deg);
+              transform: rotate(-30deg);
+    }
+    100% {
+      -webkit-transform: rotate(30deg);
+              transform: rotate(30deg);
+    }
+  }
+  
+  @-webkit-keyframes path2 {
+    0% {
+      -webkit-transform: rotate(40deg);
+              transform: rotate(40deg);
+    }
+    100% {
+      -webkit-transform: rotate(-40deg);
+              transform: rotate(-40deg);
+    }
+  }
+  
+  @keyframes path2 {
+    0% {
+      -webkit-transform: rotate(40deg);
+              transform: rotate(40deg);
+    }
+    100% {
+      -webkit-transform: rotate(-40deg);
+              transform: rotate(-40deg);
+    }
+  }
+  /*# sourceMappingURL=style.css.map */

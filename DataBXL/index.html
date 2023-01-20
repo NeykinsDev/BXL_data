@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/wifi.svg" type="image/x-icon">
+    <title>Bruxelles Wi-Fi</title>
+</head>
+<body>
+    <svg class="background--custom" id="demo" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path fill="#FFFF00" fill-opacity="0.7" d="M-100 -100L200 -100L200 50L-100 50Z" style="animation: path0 5s linear infinite alternate;" /><path fill="#00FFFF" fill-opacity="0.7" d="M-100 -100L200 -100L200 50L-100 50Z" style="animation: path1 12.5s linear infinite alternate;" /><path fill="#FF00FF" fill-opacity="0.2" d="M-100 -100L200 -100L200 20L-100 20Z" style="animation: path2 30s linear infinite alternate;" />
+      </svg>
+    <header>
+        <h1>
+            Bruxelles Wi-Fi
+        </h1>
+    </header>
+    <main id="main">
+        <div class="card">
+            <h2>Choisis ta position à Bruxelles</h2>
+            <form>
+                <label for="long">Longitude</label>
+                <input type="number" name="longitude" id="long" placeholder="Longitude" value="4.3517" autocomplete="off">
+                <label for="lat" >Latitude</label>
+                <input type="number" name="latitude" id="lat" placeholder="Latitude" value="50.8503" autocomplete="off">
+                <div>
+                    <p class="separator">
+                        Ou utilise ta géolocalisation:
+                    </p>
+                    <input type="checkbox" name="localisation" id="localisation" checked>
+                    <label for="localisation">Utiliser la localisation </label>
+                    
+                </div>
+                <div>
+                    <label for="rayon">Choisis un rayon</label>
+                    <select name="rayon" id="rayon">
+                        <option value="100">100 m</option>
+                        <option value="500">500 m</option>
+                        <option value="1000">1 km</option>
+                    </select> 
+                </div>
+
+                <div class="click" id="search">
+                    Chercher un réseau
+                </div>
+            
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        © Neykins Dev 2022 
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
